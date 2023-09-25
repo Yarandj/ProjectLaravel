@@ -10,5 +10,8 @@
 <body>
 <h1>Home</h1>
 <p>Welkom op mijn pagina!</p>
+@foreach ($galleries as $Gallery)
+    <p>{{$Gallery->name}}</p>
+@endforeach
 </body>
 </html>
