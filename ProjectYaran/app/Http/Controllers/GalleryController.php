@@ -10,6 +10,6 @@ class GalleryController extends Controller
 {
     public function Gallery(){
         $galleries = Gallery::all();
-        return view('home', compact('galleries'));
+        return view('index', compact('galleries'));
     }
 }
