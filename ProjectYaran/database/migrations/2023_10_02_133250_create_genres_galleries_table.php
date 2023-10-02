@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('galleries', function (Blueprint $table) {
+        Schema::create('genres_galleries', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('artist');
-            $table->integer('genre');
+            $table->integer('gallery_id');
+            $table->integer('genre_id');
             $table->timestamps();
         });
     }
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('galleries');
+        Schema::dropIfExists('_genres__galleries');
     }
 };

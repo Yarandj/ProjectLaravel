@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Gallery extends Model
+class Genre extends Model
 {
     use HasFactory;
-    public function Genres(): HasMany
+    public function galleries(): HasMany
     {
-        return $this->hasMany(genre::class);
+        return $this->hasMany(Gallery::class);
     }
 }
