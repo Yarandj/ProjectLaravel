@@ -15,6 +15,14 @@ class GenreSeeder extends Seeder
     {
         DB::table('genres')->insert([
             'name' => 'Landschapkunst',
+        ]);DB::table('genres')->insert([
+            'name' => 'Portretkunst',
+        ]);DB::table('genres')->insert([
+            'name' => 'Historischekunst',
+        ]);DB::table('genres')->insert([
+            'name' => 'Abstract',
+        ]);DB::table('genres')->insert([
+            'name' => 'Zeekunst',
         ]);
     }
 }

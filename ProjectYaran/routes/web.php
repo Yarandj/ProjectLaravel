@@ -22,3 +22,8 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\GalleryController::class, 'index'])->name('index');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/galleries/create', [App\Http\Controllers\GalleryController::class, 'create'])->name('create');
+Route::post('/galleries', [App\Http\Controllers\GalleryController::class, 'store'])->name('index');
+Route::get('/galleries/edit/{gallery}', [App\Http\Controllers\GalleryController::class, 'edit'])->name('edit');
+Route::put('/galleries/{gallery}', [App\Http\Controllers\GalleryController::class, 'update'])->name('update');
+
+
