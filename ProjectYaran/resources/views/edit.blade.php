@@ -8,10 +8,10 @@
 
             <div class="">
                 <label class="label" for="name">Naam Schilderij:</label><br>
-                <input id="name" type="text" name="name" placeholder="Vul de naam van het schilderij in" value="{{ old('name', $item->name) }}"><br>
+                <input id="name" type="text" name="name" placeholder="Vul de naam van het schilderij in" value="{{ old('name', $gallery->name) }}"><br>
 
                 <label class="label" for="artist">Artiest:</label><br>
-                <input id="artist" type="text" name="artist" placeholder="Vul de naam van de artiest in" value="{{ old('artist', $item->artist) }}"><br>
+                <input id="artist" type="text" name="artist" placeholder="Vul de naam van de artiest in" value="{{ old('artist', $gallery->artist) }}"><br>
 
                 <label class="label" for="genre">genre</label>
 

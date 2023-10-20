@@ -25,7 +25,7 @@ class GalleryController extends Controller
         return redirect('/ ');
     }
     public function edit(gallery $gallery){
-        return view('galleries.edit',['gallery' => $gallery, 'genres' => Genre::all()]);
+        return view('edit',['gallery' => $gallery, 'genres' => Genre::all()]);
     }
     public function update(gallery $gallery){
         $gallery->update(request()->validate([
@@ -34,5 +34,8 @@ class GalleryController extends Controller
             'genre' => 'required',
         ]));
         return redirect('/ ');
+    }
+    public function show(gallery $gallery){
+        return view('show', compact('gallery'));
     }
 }

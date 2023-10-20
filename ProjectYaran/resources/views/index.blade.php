@@ -23,8 +23,9 @@
 @endif
 <h1>Home</h1>
 <p>Welkom op mijn pagina!</p>
-@foreach ($galleries as $Gallery)
-    <p>{{$Gallery->name}}</p>
+@foreach ($galleries as $gallery)
+    <p>{{$gallery->name}}</p> <a href="/galleries/{{$gallery->id}}}">bekijk</a>
+    <a href="/galleries/edit/{{$gallery->id}}}">edit</a>
 @endforeach
 </body>
 </html>
