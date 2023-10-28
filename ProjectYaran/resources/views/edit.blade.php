@@ -15,7 +15,7 @@
 
                 <label class="label" for="genre">genre</label>
 
-                <select name="genre">
+                <select name="genre_id">
                     @foreach($genres as $genre)
                         <option value="{{$genre->id}}">{{$genre->name}}</option>
                     @endforeach

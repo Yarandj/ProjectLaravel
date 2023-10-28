@@ -11,15 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('galleries', function (Blueprint $table) {
+        Schema::create('viewed_galleries', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('artist');
-            $table->integer('genre_id');
             $table->unsignedBigInteger('user_id');
-            $table->integer('viewed')->nullable();
-            $table->boolean('status')->default(false);
+            $table->unsignedBigInteger('gallery_id');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('gallery_id')->references('id')->on('galleries')->onDelete('cascade');
         });
     }
 
@@ -28,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('galleries');
+        Schema::dropIfExists('viewed_galleries');
     }
 };

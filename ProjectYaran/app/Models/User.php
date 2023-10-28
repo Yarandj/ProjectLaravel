@@ -42,4 +42,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function viewedGalleries(){
+        return $this->belongsToMany(Gallery::class, 'viewed_galleries', 'user_id', 'gallery_id');
+    }
 }

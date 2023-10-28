@@ -9,8 +9,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Genre extends Model
 {
     use HasFactory;
-    public function genres()
-    {
-        return $this->belongsTo(Gallery::class);
+    public function gallery(){
+        return $this->hasMany(Gallery::class);
     }
 }

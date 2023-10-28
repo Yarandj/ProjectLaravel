@@ -16,27 +16,39 @@ class GalleriesSeeder extends Seeder
         DB::table('galleries')->insert([
             'name' => 'Sterrennacht',
             'artist' => 'Vincent Van Gogh',
-            'genre' => '1',
+            'genre_id' => '1',
+            'user_id' => '1',
+            'status' => true,
         ]);DB::table('galleries')->insert([
             'name' => 'Meisje met de parel',
             'artist' => 'Johannes Vermeer',
-            'genre' => '2',
+            'genre_id' => '2',
+        'user_id' => '1',
+        'status' => true,
         ]);DB::table('galleries')->insert([
             'name' => 'Appelsap',
             'artist' => 'Mikael',
-            'genre' => '3',
+            'genre_id' => '3',
+        'user_id' => '1',
+        'status' => true,
         ]);DB::table('galleries')->insert([
             'name' => 'Druivensap',
             'artist' => 'Yaran',
-            'genre' => '1',
+            'genre_id' => '1',
+        'user_id' => '1',
+        'status' => true,
         ]);DB::table('galleries')->insert([
             'name' => 'Banaan',
             'artist' => 'Milan Knol',
-            'genre' => '4',
+            'genre_id' => '4',
+        'user_id' => '1',
+        'status' => true,
         ]);DB::table('galleries')->insert([
             'name' => 'Fietsbel',
             'artist' => 'Jan Fiets',
-            'genre' => '5',
+            'genre_id' => '5',
+        'user_id' => '1',
+        'status' => true,
         ]);
     }
 }
